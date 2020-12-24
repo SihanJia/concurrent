@@ -10,13 +10,13 @@ public class CC00_ThreadState {
         new Thread(() ->
                 System.out.println("Hello Myrun.")
         );
-        t1.run();
-        t2.start();
-//        try {
-//            t1.join();
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        t1.start();
+//        t2.start();
+        try {
+            t1.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         t1.run();
     }
 
